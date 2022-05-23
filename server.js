@@ -62,7 +62,15 @@ app.set('view engine', 'ejs')
 
 require('./routes/web')(app)
 
+const server = app.listen(port , () => {
+    console.log(`Listening on port ${port}`)
+})
 
-app.listen(port, () => {
-    console.log('Listening on port ${port}')
+// Socket
+const io = require('socket.io')(server)
+io.on('connection', (socket) => {
+// Join
+socket.on('join', (orderId) => {
+socket.join(orderId)
+})
 })

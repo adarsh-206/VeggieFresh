@@ -7,8 +7,8 @@ import { initStripe } from './stripe'
 let addToCart = document.querySelectorAll('.add-to-cart')
 let cartCounter = document.querySelector('#cartCounter')
 
-function updateCart(pizza) {
-   axios.post('/update-cart', pizza).then(res => {
+function updateCart(vegetable) {
+   axios.post('/update-cart', vegetable).then(res => {
        cartCounter.innerText = res.data.totalQty
        new Noty({
            type: 'success',
@@ -28,8 +28,8 @@ function updateCart(pizza) {
 
 addToCart.forEach((btn) => {
    btn.addEventListener('click', (e) => {
-       let pizza = JSON.parse(btn.dataset.pizza)
-       updateCart(pizza)
+       let vegetable = JSON.parse(btn.dataset.vegetable)
+       updateCart(vegetable)
    })
 })
 

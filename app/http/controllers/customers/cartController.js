@@ -8,9 +8,9 @@ function cartController() {
         update(req, res) {
             // let cart = {
             //     items: {
-            //         pizzaId: { item: pizzaObject, qty:0 },
-            //         pizzaId: { item: pizzaObject, qty:0 },
-            //         pizzaId: { item: pizzaObject, qty:0 },
+            //         vegetableId: { item: vegetableObject, qty:0 },
+            //         vegetableId: { item: vegetableObject, qty:0 },
+            //         vegetableId: { item: vegetableObject, qty:0 },
             //     },
             //     totalQty: 0,
             //     totalPrice: 0

@@ -4,7 +4,7 @@ const app = express()
 const ejs = require('ejs')
 const path = require('path')
 const expressLayout = require('express-ejs-layouts')
-const port = process.env.port || 5000
+const PORT = process.env.PORT || 3000
 const mongoose = require('mongoose')
 const session = require('express-session')
 const flash = require('express-flash')
@@ -68,8 +68,8 @@ app.use((req, res) => {
     res.status(404).render('errors/404')
 })
 
-const server = app.listen(port , () => {
-            console.log(`Listening on port ${port}`)
+const server = app.listen(PORT , () => {
+            console.log(`Listening on port ${PORT}`)
         })
 
 // Socket

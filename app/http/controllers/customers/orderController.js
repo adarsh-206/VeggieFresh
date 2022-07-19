@@ -1,5 +1,6 @@
 const Order = require('../../../models/order')
 const moment = require('moment')
+moment.tz("Asia/Calcutta|Asia/Kolkata").format()
 const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 function orderController () {
     return {

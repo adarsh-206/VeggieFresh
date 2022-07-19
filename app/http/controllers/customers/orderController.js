@@ -1,7 +1,5 @@
 const Order = require('../../../models/order')
 const moment = require('moment')
-var date = moment.utc().format();
-var local = moment.utc(date).local().format();
 const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 function orderController () {
     return {
